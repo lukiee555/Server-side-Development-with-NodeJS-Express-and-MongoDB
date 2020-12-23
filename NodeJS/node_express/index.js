@@ -3,7 +3,7 @@ const express = require('express'),
 
 const hostname = 'localhost';
 const port = 3000;
-
+const morgan = require('morgan');
 const app = express();
 
 app.use((req, res, next) => {
@@ -13,7 +13,9 @@ app.use((req, res, next) => {
   res.end('<html><body><h1>This is an Express Server</h1></body></html>');
 
 });
+app.use(morgan('dev'));
 
+app.use(express.static(__dirname + '/public'));
 const server = http.createServer(app);
 
 server.listen(port, hostname, () => {
