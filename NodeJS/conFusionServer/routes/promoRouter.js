@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Promotions = require('../models/promotions');
 var authenticate = require('../authenticate');
 const promoRouter = express.Router();
-
+const cors = require('./cors');
 promoRouter.use(bodyParser.json());
 
 promoRouter.route('/')

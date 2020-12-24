@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Leaders = require('../models/leaders');
 var authenticate = require('../authenticate');
 const leaderRouter = express.Router();
-
+const cors = require('./cors');
 leaderRouter.use(bodyParser.json());
 
 leaderRouter.route('/')
