@@ -29,7 +29,7 @@ var promoSchema = new Schema({
     },
     featured: {
         type: Boolean,
-        required: fasle
+        required: false
     }
 }, {
     timestamps: true
